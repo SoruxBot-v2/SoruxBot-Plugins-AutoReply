@@ -8,15 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="SoruxBot.PluginLib.Permission">
-      <HintPath>..\SDK\SoruxBot.PluginLib.Permission.dll</HintPath>
-    </Reference>
-    <Reference Include="SoruxBot.PluginLib.Timer">
-      <HintPath>..\SDK\SoruxBot.PluginLib.Timer.dll</HintPath>
-    </Reference>
-    <Reference Include="SoruxBot.SDK">
-      <HintPath>..\SDK\SoruxBot.SDK.dll</HintPath>
-    </Reference>
+    <PackageReference Include="SoruxBot.SDK" Version="1.0.8" />
   </ItemGroup>
 
 </Project>

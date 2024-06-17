@@ -1,0 +1,6 @@
+*
+!.gitignore
+!SDK/
+!SoruxBotPlugins.sln
+!*.cs
+!*.csproj

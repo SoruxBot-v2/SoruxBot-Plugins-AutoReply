@@ -4,7 +4,7 @@ using SoruxBot.SDK.Plugins.Service;
 using SoruxBot.SDK.Attribute;
 using SoruxBot.SDK.Model.Attribute;
 using SoruxBot.SDK.Plugins.Model;
-using SoruxBot.PluginLib.Permission;
+//using SoruxBot.PluginLib.Permission;
 
 namespace SoruxBot.Plugins.AutoReply
 {
@@ -13,14 +13,14 @@ namespace SoruxBot.Plugins.AutoReply
 		private ILoggerService _loggerService;
 		private IPluginsDataStorage _pluginsDataStorage;
 		private ICommonApi _bot;
-		private IPluginLibPermission _permission;
+		//private IPluginLibPermission _permission;
 		private string _permissionNode = "SoruxBot.Plugins.AutoReply";
-		public AutoReplyController(ILoggerService loggerService, IPluginsDataStorage pluginsDataStroage, ICommonApi bot, IPluginLibPermission permission) 
+		public AutoReplyController(ILoggerService loggerService, IPluginsDataStorage pluginsDataStroage, ICommonApi bot) 
 		{
 			_bot = bot;
 			_loggerService = loggerService;
 			_pluginsDataStorage = pluginsDataStroage;
-			_permission = permission;
+			//_permission = permission;
 		}
 		public override void OnPluginInitialization()
 		{
@@ -33,7 +33,7 @@ namespace SoruxBot.Plugins.AutoReply
 			_loggerService.Info("AutoReplyPersonal", "Get personal message.");
 			if (context.MessageChain == null || context.TriggerId == "") return PluginFlag.MsgIgnored;
 			if(context.TriggerId == context.BotAccount) return PluginFlag.MsgIgnored;
-			if(!_permission.CheckIfValid(context, _permissionNode + "AutoReplyPersonal")) return PluginFlag.MsgIgnored;
+			//if(!_permission.CheckIfValid(context, _permissionNode + "AutoReplyPersonal")) return PluginFlag.MsgIgnored;
 
 			string text = context.MessageChain.Messages[0].ToPreviewText();
 			var msg = MessageBuilder.PrivateMessage(context.TriggerId, "QQ")
@@ -82,19 +82,19 @@ namespace SoruxBot.Plugins.AutoReply
 
 		}
 
-		private void SetPermission()
-		{
-			_permission.TryAddPermission(_permissionNode + "AutoReplyPersonal",
-				new PermissionBuilder("QQ")
-				.Insert(
-					new PermissionBuilder("956884168", true)
-				)
-				.Insert(
-					new PermissionBuilder("2796828933")
-					.Insert(["2796828933"])
-				)
-				.Build()
-			);
-		}
+		//private void SetPermission()
+		//{
+		//	_permission.TryAddPermission(_permissionNode + "AutoReplyPersonal",
+		//		new PermissionBuilder("QQ")
+		//		.Insert(
+		//			new PermissionBuilder("956884168", true)
+		//		)
+		//		.Insert(
+		//			new PermissionBuilder("2796828933")
+		//			.Insert(["2796828933"])
+		//		)
+		//		.Build()
+		//	);
+		//}
 	}
 }
