@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoruxBot.Plugins.AutoReply", "SoruxBot.AutoReply.Plugins\SoruxBot.Plugins.AutoReply.csproj", "{646BA692-143B-4FBB-A9A2-57C9060C92DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{646BA692-143B-4FBB-A9A2-57C9060C92DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646BA692-143B-4FBB-A9A2-57C9060C92DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646BA692-143B-4FBB-A9A2-57C9060C92DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646BA692-143B-4FBB-A9A2-57C9060C92DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC552F4F-40D7-4102-9D12-33E55C67ACC0}
+	EndGlobalSection
+EndGlobal

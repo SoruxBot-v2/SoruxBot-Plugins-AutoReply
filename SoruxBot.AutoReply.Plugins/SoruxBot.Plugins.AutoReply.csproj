@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SoruxBot.AutoReply.Plugins</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="SoruxBot.PluginLib.Permission">
+      <HintPath>..\SDK\SoruxBot.PluginLib.Permission.dll</HintPath>
+    </Reference>
+    <Reference Include="SoruxBot.PluginLib.Timer">
+      <HintPath>..\SDK\SoruxBot.PluginLib.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="SoruxBot.SDK">
+      <HintPath>..\SDK\SoruxBot.SDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
